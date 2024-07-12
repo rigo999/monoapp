@@ -1,27 +1,43 @@
 {
-  "name": "web",
+  "name": "@3rapp/web",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbo",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "pnpm lint:es && pnpm lint:style",
+    "lint:es": "next lint --fix",
+    "lint:style": "stylelint \"**/*.css\" --fix --cache --cache-location node_modules/.cache/stylelint/"
   },
   "dependencies": {
-    "@repo/ui": "workspace:*",
-    "react": "19.0.0-rc-f994737d14-20240522",
-    "react-dom": "19.0.0-rc-f994737d14-20240522",
-    "next": "15.0.0-rc.0"
+    "@3rapp/store": "workspace:*",
+    "@radix-ui/react-icons": "^1.3.0",
+    "@radix-ui/react-slot": "^1.1.0",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
+    "next": "14.2.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tailwind-merge": "^2.3.0",
+    "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
-    "@repo/eslint-config": "workspace:*",
-    "@repo/typescript-config": "workspace:*",
-    "typescript": "^5",
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "eslint": "^8",
-    "eslint-config-next": "15.0.0-rc.0"
+    "@3rapp/code": "workspace:*",
+    "@3rapp/utils": "workspace:*",
+    "eslint": "^8.57.0",
+    "stylelint": "^16.5.0",
+    "prettier": "^3.2.5",
+    "@types/node": "^20.12.12",
+    "@types/react": "^18.3.2",
+    "@types/react-dom": "^18.3.0",
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.38",
+    "postcss-import": "^16.1.0",
+    "postcss-mixins": "^10.0.1",
+    "postcss-nested": "^6.0.1",
+    "postcss-nesting": "^12.1.4",
+    "tailwindcss": "^3.4.3",
+    "typescript": "^5.4.5"
   }
 }

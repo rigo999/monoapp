@@ -1,0 +1,9 @@
+/* tailwind 基础样式拓展 */
+@layer tailwind-base , antd;
+
+@layer tailwind-base {
+  @tailwind base;
+}
+
+@layer base {
+}

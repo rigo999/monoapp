@@ -1,4 +1,6 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+  transpilePackages: ['@3rapp/store'],
+}
 
-export default nextConfig;
+export default nextConfig

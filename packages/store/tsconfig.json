@@ -1,0 +1,10 @@
+{
+    "extends": "@3rapp/code/tsconfig/react.json",
+    "compilerOptions": {
+        "baseUrl": "src",
+        "paths": {
+            "@/*": ["src/*"]
+        }
+    },
+    "include": ["src"]
+}

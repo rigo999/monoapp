@@ -1,0 +1,12 @@
+// apps/api/tsconfig.json
+{
+  "extends": "@3rapp/code/tsconfig/node.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "outDir": "./dist",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "include": ["src", "bin", "test", "typings/**/*.d.ts", "**.js"]
+}

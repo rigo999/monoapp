@@ -1,0 +1,13 @@
+// apps/admin/tsconfig.json
+{
+  "extends": "@3rapp/code/tsconfig/react.json",
+  "compilerOptions": {
+    "outDir": "./dist",
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["src/*"]
+    }
+  },
+  "include": ["src"],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}

@@ -2,12 +2,26 @@
   "name": "monoapp",
   "private": true,
   "scripts": {
+    "gen": "turbo gen workspace",
     "build": "turbo build",
     "dev": "turbo dev",
     "lint": "turbo lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "api:dev": "turbo dev --filter=@3rapp/utils --filter=@3rapp/api",
+    "api:build": "turbo build --filter=@3rapp/api",
+    "api:start": "turbo start --filter=@3rapp/api",
+    "api:cli": "turbo cli --filter=@3rapp/api --",
+    "admin:dev": "turbo dev --filter=@3rapp/admin",
+    "admin:build": "turbo dev --filter=build",
+    "admin:start": "turbo start --filter=@3rapp/admin",
+    "aa:dev": "turbo dev --filter=@3rapp/api --filter=@3rapp/admin",
+    "web:dev": "turbo dev --filter=@3rapp/web",
+    "web:build": "turbo build --filter=@3rapp/web",
+    "web:start": "turbo start --filter=@3rapp/web",
+    "wa:dev": "turbo dev --filter=@3rapp/api --filter=@3rapp/web"
   },
   "devDependencies": {
+    "@3rapp/code": "workspace:*",
+    "eslint": "^8.57.0",
     "prettier": "^3.2.5",
     "turbo": "^2.0.6",
     "typescript": "^5.4.5"
@@ -15,5 +29,17 @@
   "packageManager": "pnpm@8.15.6",
   "engines": {
     "node": ">=18"
+  },
+  "pnpm": {
+    "updateConfig": {
+      "ignoreDependencies": [
+        "eslint"
+      ]
+    },
+    "peerDependencyRules": {
+      "allowAny": [
+        "@typescript-eslint/eslint-plugin"
+      ]
+    }
   }
 }

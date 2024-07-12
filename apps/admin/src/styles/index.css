@@ -1,0 +1,14 @@
+/* 全局 css 引导样式 */
+@import './vars.css';
+
+/* 导入默认tailwind base层 */
+
+/* @import 'tailwindcss/base'; */
+
+/* 导入自定义扩展base层，会覆盖默认层 */
+@import './tailwind/base.css';
+@import 'tailwindcss/components';
+@import './tailwind/components.css';
+@import 'tailwindcss/utilities';
+@import './tailwind/utilities.css';
+@import './app.css';
